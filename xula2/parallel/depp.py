@@ -2,7 +2,7 @@ import myhdl
 from myhdl import *
 import argparse
 from argparse import Namespace
-
+from random import *
 from pprint import pprint 
 
 from rhea.system import Reset
@@ -80,11 +80,11 @@ def para_rpi2B( clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
  
     
 
-    dut_depp = depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,fr_rpi2B)
+    dut_depp = depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,fr_rpi2B,to_rpi2B)
  
       
     return myhdl.instances()    
-def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db):
+def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db,to_rpi2B):
 
     @always_comb
     def rtl1():
@@ -104,6 +104,11 @@ def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db):
     def rtl4():
         if (~a_write and a_dstb_sr == 4):
             a_data_reg.next = a_db
+
+    @always_comb
+    def rtl5():
+	if(a_write == 1):
+            to_rpi2B.next = a_data_reg
 
     return myhdl.instances()
  
@@ -126,51 +131,57 @@ def tb(clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
        yield clock.posedge 		
        yield delay(100)
        	
-              		
-       while(a_wait):
-           print "wait for a_wait",a_wait
+       for i in range(10):
+           fr_rpi2B.next = randint(0,128)
+           yield clock.posedge
+                         		
+           while(a_wait):
+               print "wait for a_wait",a_wait
+               '''
+               a_astb.next = 1
+               a_dstb.next = 1
+               a_write.next = 1
+               
+               yield clock.posedge                    		
+               '''        		
+           #fr_rpi2B.next = 1
+           #a_db.next = 1
+           yield clock.posedge
+           while(a_wait):
+               print "wait for a_wait",a_wait
+           '''           
+           a_write.next = 0
+           yield clock.posedge
            '''
+           a_astb.next = 0
+           yield clock.posedge
+           a_write.next = 0
+           yield clock.posedge       
            a_astb.next = 1
-           a_dstb.next = 1
+           yield clock.posedge
            a_write.next = 1
-           
-           yield clock.posedge                    		
-           '''        		
-       fr_rpi2B.next = 1
-       #a_db.next = 1
-       yield clock.posedge
-       while(a_wait):
-           print "wait for a_wait",a_wait
-       '''           
-       a_write.next = 0
-       yield clock.posedge
-       '''
-       a_astb.next = 0
-       yield clock.posedge
-       a_write.next = 0
-       yield clock.posedge       
-       a_astb.next = 1
-       yield clock.posedge
-       a_write.next = 1
-       yield clock.posedge              
-       fr_rpi2B.next = 2
-       #a_db.next = 2
-       yield clock.posedge
-       while(a_wait):
-           print "wait for a_wait",a_wait
-       '''           
-       a_write.next = 0
-       yield clock.posedge
-       '''
-       a_dstb.next = 0
-       yield clock.posedge
-       a_write.next = 0
-       yield clock.posedge       
-       a_dstb.next = 1
-       yield clock.posedge
-       a_write.next = 1
-       yield clock.posedge
-       yield delay(200)  	                             
+           yield clock.posedge              
+       for i in range(10):
+           fr_rpi2B.next = randint(0,128)
+           yield clock.posedge
+           #fr_rpi2B.next = 1 
+           #a_db.next = 2
+           yield clock.posedge
+           while(a_wait):
+               print "wait for a_wait",a_wait
+           '''           
+           a_write.next = 0
+           yield clock.posedge
+           '''
+           a_dstb.next = 0
+           yield clock.posedge
+           a_write.next = 0
+           yield clock.posedge       
+           a_dstb.next = 1
+           yield clock.posedge
+           a_write.next = 1
+           yield clock.posedge
+           yield delay(200)  	                             
 
        raise StopSimulation
           		    
@@ -179,7 +190,9 @@ def tb(clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
  
 def convert():
 	toVerilog(para_rpi2B,clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait)
-	toVerilog(depp,clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db)
+	 
+	toVerilog(depp,clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db,to_rpi2B)
+	 
  
 def main():
     args = cliparse()
