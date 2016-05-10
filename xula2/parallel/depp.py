@@ -190,9 +190,7 @@ def tb(clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
  
 def convert():
 	toVerilog(para_rpi2B,clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait)
-	 
 	toVerilog(depp,clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_db,to_rpi2B)
-	 
  
 def main():
     args = cliparse()
