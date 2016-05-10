@@ -1,0 +1,22 @@
+ 
+# pin definitions 
+set_io a_dstb T16 
+set_io a_write T9 
+set_io to_rpi2B[0] E2 
+set_io to_rpi2B[1] F3 
+set_io to_rpi2B[2] D1 
+set_io to_rpi2B[3] E3 
+set_io to_rpi2B[4] D2 
+set_io to_rpi2B[5] C2 
+set_io to_rpi2B[6] C1 
+set_io clock C8 
+set_io fr_rpi2B[0] J1 
+set_io fr_rpi2B[1] K1 
+set_io fr_rpi2B[2] H1 
+set_io fr_rpi2B[3] J2 
+set_io fr_rpi2B[4] H2 
+set_io fr_rpi2B[5] G2 
+set_io fr_rpi2B[6] G1 
+set_io fr_rpi2B[7] F2 
+set_io a_wait P9 
+set_io a_astb R16 
