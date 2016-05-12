@@ -8,11 +8,11 @@ from __future__ import print_function
 
 from myhdl import *
 
-def ts( clk, reset, tsenable, tson, tspin , readback ):
+def ts( clock, reset, tsenable, tson, tspin , readback ):
 
     tspindriver = tspin.driver()
 
-    @always_seq( clk.posedge, reset = reset )
+    @always_seq( clock.posedge, reset = reset )
     def rtlseq():
         if tsenable:
             if tson:
@@ -33,7 +33,7 @@ def ts( clk, reset, tsenable, tson, tspin , readback ):
 
 
 def tb_ts():
-    clk      = Signal( bool( 1 ) )
+    clock      = Signal( bool( 1 ) )
     reset    = ResetSignal( 0, active=1, async=True )
     tsenable = Signal( bool( 0 ) )
     tson     = Signal( bool( 0 ) )
@@ -43,11 +43,11 @@ def tb_ts():
     # a test function
     def _test():
         # instantiate the design under test
-        tbdut = ts( clk, reset, tsenable, tson, tspin , readback )
+        tbdut = ts( clock, reset, tsenable, tson, tspin , readback )
 
         @always( delay( 3 ) )
-        def tbclk():
-            clk.next = not clk
+        def tbclock():
+            clock.next = not clock
 
         @instance
         def tbstim():
@@ -57,26 +57,26 @@ def tb_ts():
             yield delay( 21 )
             reset.next = not reset.active
 
-            yield clk.negedge
-            yield clk.negedge
+            yield clock.negedge
+            yield clock.negedge
             tson.next = 1
-            yield clk.negedge
+            yield clock.negedge
             tsenable.next = 1
-            yield clk.negedge
+            yield clock.negedge
             tson.next = 0
-            yield clk.negedge
+            yield clock.negedge
             tsenable.next = 0
-            yield clk.negedge
+            yield clock.negedge
 
             raise StopSimulation
 
-        return tbdut, tbclk, tbstim
+        return tbdut, tbclock, tbstim
 
 
     Simulation(traceSignals(_test)).run(100)
     print("** Simulation Successful **")
-    toVHDL(ts, clk, reset, tsenable, tson, tspin , readback )
-    toVerilog( ts, clk, reset,tsenable, tson, tspin , readback )
+    toVHDL(ts, clock, reset, tsenable, tson, tspin , readback )
+    toVerilog( ts, clock, reset,tsenable, tson, tspin , readback )
 
 
 if __name__ == '__main__':

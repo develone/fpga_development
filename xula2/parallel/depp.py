@@ -5,10 +5,12 @@ from argparse import Namespace
 from random import *
 from pprint import pprint 
 
+from mul_ts import *
 from rhea.system import Reset
 from rhea.build.boards import get_board
-
-reset = Reset(0, active=1, async=False)
+reset    = ResetSignal( 0, active=1, async=True )
+tsenable = Signal(bool(0))
+#reset = Reset(0, active=1, async=False)
 
 '''Currently using to_rpi2B & fr_rpi2B'''
  
@@ -81,6 +83,8 @@ def para_rpi2B( clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
     
 
     dut_depp = depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,fr_rpi2B,to_rpi2B)
+    dut_mul_ts = mul_ts(clock,fr_rpi2B,reset,tsenable,to_rpi2B)
+    
  
       
     return myhdl.instances()    
@@ -160,7 +164,11 @@ def tb(clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
            a_astb.next = 1
            yield clock.posedge
            a_write.next = 1
-           yield clock.posedge              
+           yield clock.posedge
+           tsenable.next = 1
+           yield clock.posedge
+           tsenable.next = 0
+           yield clock.posedge                         
        for i in range(10):
            fr_rpi2B.next = randint(0,128)
            yield clock.posedge
@@ -181,6 +189,11 @@ def tb(clock, to_rpi2B,fr_rpi2B,a_dstb,a_astb,a_write,a_wait):
            yield clock.posedge
            a_write.next = 1
            yield clock.posedge
+           tsenable.next = 1
+           yield clock.posedge
+           tsenable.next = 0
+           yield clock.posedge
+           
            yield delay(200)  	                             
 
        raise StopSimulation
