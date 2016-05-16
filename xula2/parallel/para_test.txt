@@ -1,0 +1,68 @@
+pi@raspberrypi2-146 ~ $ sudo PIGPIO/pigpiod
+
+
+pi@raspberrypi2-146 ~ $ xstest -u 0 -b xula2-lx9
+Success: XuLA2-LX9 passed diagnostic test!
+pi@raspberrypi2-146 ~ $ python jpeg-2000-test/PIGPIO/python/para_test.py 
+CH14 B15 BCM14 a_dstb 1
+CH31 A2 BCM2 a_astb 1
+CH22 H1 BCM5 a_write 1
+CH13 B16 BCM15 a_wait 1
+
+CH6 K16 BCM12 fr_rpi2B<0> 1
+CH2 R16 BCM19 fr_rpi2B<1> 1
+CH4 M16 BCM13 fr_rpi2B<2> 1
+CH5 K15 BCM6 fr_rpi2B<3> 1
+CH12 C15 BCM18 fr_rpi2B<4> 1
+CH1 R15 BCM20 fr_rpi2B<5> 1
+CH3 M15 BCM16 fr_rpi2B<6> 1
+CH7 J16 BCM7 fr_rpi2B<7> 1
+
+CH23 H2 BCM11 to_rpi2B<0> 0
+CH25 F2 BCM10 to_rpi2B<1> 1
+CH27 E2 BCM27 to_rpi2B<2> 1
+CH29 B1 BCM4 to_rpi2B<3> 1
+CH24 F1 BCM19 to_rpi2B<4> 1
+CH26 E1 BCM22 to_rpi2B<5> 1
+CH28 C1 BCM17 to_rpi2B<6> 1
+CH30 B2 BCM3 to_rpi2B<7> 1
+
+
+CHAN (1,2,3,4,5,6,7,12,13,14,22,23,24,25,26,27,28,29,30,31)
+Not being used CHAN(8,9,10,11)
+Not on RPi Connector (15,16,17,18,19,20,21)
+Using GPIOs (2,3,4,5,6,7,10,11,12,13,15,16,17,18,19,20,22,27)
+Not being used (8,9,14,21,23,24,25,26)
+pi@raspberrypi2-146 ~ $ xsload --usb 0 --fpga xula2_para.bit 
+Success: Bitstream in xula2_para.bit downloaded to FPGA on XuLA2-LX9!
+
+pi@raspberrypi2-146 ~ $ python jpeg-2000-test/PIGPIO/python/para_test.py 
+
+Note: This is indicating the a_wait is lo when the FPGA is programmed.
+
+CH14 B15 BCM14 a_dstb 1
+CH31 A2 BCM2 a_astb 1
+CH22 H1 BCM5 a_write 1
+CH13 B16 BCM15 a_wait 0
+
+CH6 K16 BCM12 fr_rpi2B<0> 0
+CH2 R16 BCM19 fr_rpi2B<1> 1
+CH4 M16 BCM13 fr_rpi2B<2> 0
+CH5 K15 BCM6 fr_rpi2B<3> 0
+CH12 C15 BCM18 fr_rpi2B<4> 0
+CH1 R15 BCM20 fr_rpi2B<5> 0
+CH3 M15 BCM16 fr_rpi2B<6> 1
+CH7 J16 BCM7 fr_rpi2B<7> 1
+
+CH23 H2 BCM11 to_rpi2B<0> 0
+CH25 F2 BCM10 to_rpi2B<1> 0
+CH27 E2 BCM27 to_rpi2B<2> 0
+CH29 B1 BCM4 to_rpi2B<3> 1
+CH24 F1 BCM19 to_rpi2B<4> 1
+CH26 E1 BCM22 to_rpi2B<5> 0
+CH28 C1 BCM17 to_rpi2B<6> 0
+CH30 B2 BCM3 to_rpi2B<7> 1
+
+
+ 
+

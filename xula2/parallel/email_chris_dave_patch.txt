@@ -1,0 +1,97 @@
+Hello Chris & Dave 
+Using rhea version 
+commit 605348b2570f83da341bef8b8a13596e2b8eccd9
+Author: Christopher Felton <chris.felton@gmail.com>
+Date:   Sun Apr 3 16:35:02 2016 -0500
+
+Two of the pins assigned should not be used per Dave since they are connected 
+to the EEPROM.
+
+vidal@ws009:~/wkg/fpga_development/xula2/parallel$ less xilinx/xula2.ucf
+#
+NET "to_rpi2B<0>" LOC = "H2" ;
+NET "to_rpi2B<1>" LOC = "F2" ;
+NET "to_rpi2B<2>" LOC = "E2" ;
+NET "to_rpi2B<3>" LOC = "B1" ;
+NET "to_rpi2B<4>" LOC = "F1" ;
+NET "to_rpi2B<5>" LOC = "E1" ;
+NET "to_rpi2B<6>" LOC = "C1" ;
+NET "to_rpi2B<7>" LOC = "B2" ;
+NET "clock" LOC = "A9" ;
+NET "fr_rpi2B<0>" LOC = "R7" ;
+NET "fr_rpi2B<1>" LOC = "R16" ;
+NET "fr_rpi2B<2>" LOC = "M16" ;
+NET "fr_rpi2B<3>" LOC = "K15" ;
+NET "fr_rpi2B<4>" LOC = "T7" ;
+NET "fr_rpi2B<5>" LOC = "R15" ;
+NET "fr_rpi2B<6>" LOC = "M15" ;
+NET "fr_rpi2B<7>" LOC = "K15" ;
+NET "a_dstb" LOC = "B15" ;
+NET "a_astb" LOC = "A2" ;
+NET "a_write" LOC = "H1" ;
+NET "a_wait" LOC = "B16" ;
+#
+NET "clock" TNM_NET = "clock"; 
+TIMESPEC "TS_clock" = PERIOD "clock" 83.3333333 ns HIGH 50%;
+#
+
+I modified 2 of the pm1 definitions.
+ 
+diff --git a/rhea/build/boards/xilinx/_xula.py b/rhea/build/boards/xilinx/_xula.
+index 059599c..3b3b3b8 100644
+--- a/rhea/build/boards/xilinx/_xula.py
++++ b/rhea/build/boards/xilinx/_xula.py
+@@ -170,8 +170,8 @@ class Xula2StickItMB(Xula2):
+ 
+         super(Xula2StickItMB, self).__init__()
+ 
+-        self.add_port_name('pm1', 'chan', (0,  2,  4,  5,
+-                                           32, 1,  3,  5))
++        self.add_port_name('pm1', 'chan', (6,  2,  4,  5,
++                                           32, 1,  3,  7))
+ 
+         self.add_port_name('pm2', 'chan', (15, 17, 19, 21,
+                                            16, 18, 20, 22))
+@@ -195,4 +195,4 @@ class Xula2StickItMB(Xula2):
+                     
+ 
+ 
+-                           
+\ No newline at end of file
++   
+
+I created a _xula.py.patch and applied the patch.
+
+
+vidal@ws009:~/wkg/rhea/rhea/build/boards/xilinx$ patch -p5  < ~/wkg/fpga_development/xula2/parallel/_xula.py.patch
+patching file _xula.py
+
+This is now the resulting xula2.ucf 
+#
+NET "to_rpi2B<0>" LOC = "H2" ;
+NET "to_rpi2B<1>" LOC = "F2" ;
+NET "to_rpi2B<2>" LOC = "E2" ;
+NET "to_rpi2B<3>" LOC = "B1" ;
+NET "to_rpi2B<4>" LOC = "F1" ;
+NET "to_rpi2B<5>" LOC = "E1" ;
+NET "to_rpi2B<6>" LOC = "C1" ;
+NET "to_rpi2B<7>" LOC = "B2" ;
+NET "clock" LOC = "A9" ;
+NET "fr_rpi2B<0>" LOC = "K16" ;
+NET "fr_rpi2B<1>" LOC = "R16" ;
+NET "fr_rpi2B<2>" LOC = "M16" ;
+NET "fr_rpi2B<3>" LOC = "K15" ;
+NET "fr_rpi2B<4>" LOC = "C15" ;
+NET "fr_rpi2B<5>" LOC = "R15" ;
+NET "fr_rpi2B<6>" LOC = "M15" ;
+NET "fr_rpi2B<7>" LOC = "J16" ;
+NET "a_dstb" LOC = "B15" ;
+NET "a_astb" LOC = "A2" ;
+NET "a_write" LOC = "H1" ;
+NET "a_wait" LOC = "B16" ;
+#
+NET "clock" TNM_NET = "clock"; 
+TIMESPEC "TS_clock" = PERIOD "clock" 83.3333333 ns HIGH 50%;
+#
+
+ 
