@@ -5,8 +5,11 @@ Author: Christopher Felton <chris.felton@gmail.com>
 Date:   Sun Apr 3 16:35:02 2016 -0500
 
 Two of the pins assigned should not be used per Dave since they are connected 
-to the EEPROM.
+to the EEPROM.  Pins R7 & T7 also pin K15 is being set twice.
 
+This required 3 pins to be changed on pm1 of the Xula2StickItMB(Xula2)
+
+This is the xula2.ucf create when not patched.
 vidal@ws009:~/wkg/fpga_development/xula2/parallel$ less xilinx/xula2.ucf
 #
 NET "to_rpi2B<0>" LOC = "H2" ;
@@ -62,7 +65,7 @@ index 059599c..3b3b3b8 100644
 
 I created a _xula.py.patch and applied the patch.
 
-
+This is the xula2.ucf create when patched.
 vidal@ws009:~/wkg/rhea/rhea/build/boards/xilinx$ patch -p5  < ~/wkg/fpga_development/xula2/parallel/_xula.py.patch
 patching file _xula.py
 
