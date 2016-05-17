@@ -26,6 +26,7 @@ CH24 F1 BCM19 to_rpi2B<4> 1
 CH26 E1 BCM22 to_rpi2B<5> 1
 CH28 C1 BCM17 to_rpi2B<6> 1
 CH30 B2 BCM3 to_rpi2B<7> 1
+to_rpi2B 254 
 
 
 CHAN (1,2,3,4,5,6,7,12,13,14,22,23,24,25,26,27,28,29,30,31)
@@ -39,7 +40,6 @@ Success: Bitstream in xula2_para.bit downloaded to FPGA on XuLA2-LX9!
 pi@raspberrypi2-146 ~ $ python jpeg-2000-test/PIGPIO/python/para_test.py 
 
 Note: This is indicating the a_wait is lo when the FPGA is programmed.
-
 CH14 B15 BCM14 a_dstb 1
 CH31 A2 BCM2 a_astb 1
 CH22 H1 BCM5 a_write 1
@@ -62,7 +62,8 @@ CH24 F1 BCM19 to_rpi2B<4> 1
 CH26 E1 BCM22 to_rpi2B<5> 0
 CH28 C1 BCM17 to_rpi2B<6> 0
 CH30 B2 BCM3 to_rpi2B<7> 1
-
+to_rpi2B 152
+ 
 
  
 
