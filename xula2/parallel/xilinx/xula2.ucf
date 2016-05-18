@@ -18,7 +18,7 @@ NET "fr_rpi2B<6>" LOC = "M15" ;
 NET "fr_rpi2B<7>" LOC = "J16" ;
 NET "a_dstb" LOC = "J14" ;
 NET "a_astb" LOC = "A2" ;
-NET "a_write" LOC = "H1" ;
+NET "a_write" LOC = "C16" ;
 NET "a_wait" LOC = "F15" ;
 #
 NET "clock" TNM_NET = "clock"; 

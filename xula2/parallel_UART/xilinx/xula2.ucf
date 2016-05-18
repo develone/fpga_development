@@ -1,4 +1,24 @@
 #
+NET "a_dstb" LOC = "J14" ;
+NET "a_write" LOC = "C16" ;
+NET "to_rpi2B<0>" LOC = "H2" ;
+NET "to_rpi2B<1>" LOC = "F2" ;
+NET "to_rpi2B<2>" LOC = "E2" ;
+NET "to_rpi2B<3>" LOC = "B1" ;
+NET "to_rpi2B<4>" LOC = "F1" ;
+NET "to_rpi2B<5>" LOC = "E1" ;
+NET "to_rpi2B<6>" LOC = "C1" ;
+NET "to_rpi2B<7>" LOC = "B2" ;
+NET "clock" LOC = "A9" ;
+NET "fr_rpi2B<0>" LOC = "K16" ;
+NET "fr_rpi2B<1>" LOC = "R16" ;
+NET "fr_rpi2B<2>" LOC = "M16" ;
+NET "fr_rpi2B<3>" LOC = "K15" ;
+NET "fr_rpi2B<4>" LOC = "C15" ;
+NET "fr_rpi2B<5>" LOC = "R15" ;
+NET "fr_rpi2B<6>" LOC = "M15" ;
+NET "fr_rpi2B<7>" LOC = "J16" ;
+NET "a_wait" LOC = "F15" ;
 NET "bcm15_rxd" LOC = "B16" ;
 NET "led<0>" LOC = "T4" ;
 NET "led<1>" LOC = "R1" ;
@@ -8,7 +28,7 @@ NET "led<4>" LOC = "R2" ;
 NET "led<5>" LOC = "M2" ;
 NET "led<6>" LOC = "K3" ;
 NET "led<7>" LOC = "H1" ;
-NET "clock" LOC = "A9" ;
+NET "a_astb" LOC = "A2" ;
 NET "bcm14_txd" LOC = "B15" ;
 #
 NET "clock" TNM_NET = "clock"; 

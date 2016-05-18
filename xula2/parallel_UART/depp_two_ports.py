@@ -11,8 +11,8 @@ from rhea.build.boards import get_board
 def build(args):
     '''
         3 GPIO for CTL OUTPUT 1 GPIO for CTL INPUT
-        CH8 J14 CH31 A2 CH22 H1 CH9 F15
-        BCM8    BCM2    BCM5    BCM25
+        CH8 J14 CH31 A2 CH11 C16 CH9 F15
+        BCM8    BCM2    BCM23    BCM25
 	GPIO FOR XULA2-LX9
 
 	8 GPIO FOR OUTPUT  
@@ -32,7 +32,8 @@ def build(args):
     brd.add_port('a_astb', 'A2')
     #brd.add_port('a_dstb', 'B15')
     brd.add_port('a_dstb', 'J14')
-    brd.add_port('a_write', 'H1')
+    #brd.add_port('a_write', 'H1')
+    brd.add_port('a_write', 'C16')
     #brd.add_port('a_wait', 'B16')
     brd.add_port('a_wait', 'F15')
     print(("%s %s") % (brd, brd.device))

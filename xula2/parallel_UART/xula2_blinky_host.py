@@ -14,11 +14,15 @@ from rhea.system import FIFOBus
 from rhea.build.boards import get_board
 
 
-def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd):
+def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd,a_dstb,a_astb,a_write,a_wait,to_rpi2B,fr_rpi2B):
     """
     The LEDs are controlled from the RPi over the UART
     to the FPGA.
     """
+    a_astb_sr = Signal(intbv(0)[3:])
+    a_dstb_sr = Signal(intbv(0)[3:])
+    a_addr_reg = Signal(intbv(0)[8:])
+    a_data_reg = Signal(intbv(0)[8:])         
     reset = ResetSignal(0, active=0,async=True)
     glbl = Global(clock, reset)
     ledreg = Signal(intbv(0)[8:])
@@ -80,16 +84,41 @@ def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd):
 				reset.next = 0
 		else:
 			reset.next = 1
-                        
+
+    @always_comb
+    def rtl1():
+        a_wait.next = (not a_astb) or (not a_dstb)
+
+    @always(clock.posedge)
+    def rtl3():
+        if (~a_write and a_astb_sr == 4):
+            a_addr_reg.next = fr_rpi2B
+
+    @always(clock.posedge)
+    def rtl4():
+        if (~a_write and a_dstb_sr == 4):
+            a_data_reg.next = fr_rpi2B
+     
+    @always_comb
+    def rtl5():
+	if(a_write == 1):
+            to_rpi2B.next = a_data_reg                                
     return (tick_inst, uart_inst, cmd_inst,
-            beh_led_control, beh_led_read, beh_assign, reset_tst)
+            beh_led_control, beh_led_read, beh_assign, reset_tst,rtl1,rtl3,rtl4,rtl5)
 
 
 def build(args):
     brd = get_board('xula2_stickit_mb')
+    brd.add_port_name('fr_rpi2B', 'pm1', slice(0, 8))
+    brd.add_port_name('to_rpi2B', 'pm3', slice(0, 8))    
     brd.add_port_name('led', 'pm2', slice(0, 8))
     brd.device = 'XC6SLX9' 
     brd.add_reset('reset', active=0, async=True, pins=('H2',))
+    brd.add_port('a_astb', 'A2')
+    brd.add_port('a_dstb', 'J14')
+    #brd.add_port('a_write', 'H1')
+    brd.add_port('a_write', 'C16')
+    brd.add_port('a_wait', 'F15')
     flow = brd.get_flow(top=xula2_blinky_host)
     flow.run()
     info = flow.get_utilization()
@@ -128,6 +157,13 @@ def main():
         test_instance()
         
     if args.build:
+        a_dstb = Signal(bool(0))
+        a_astb = Signal(bool(0))
+        a_write = Signal(bool(0))
+        a_wait = Signal(bool(0))
+        fr_rpi2B = Signal(intbv(0)[8:]) 
+        to_rpi2B = Signal(intbv(0)[8:])
+                
         build(args)
 
     if args.program:

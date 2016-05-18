@@ -98,19 +98,19 @@ def a_astb_lo_hi():
 
 def pullup_a_write():
     #CH33 a_write
-    GPIO=5
+    GPIO=23
     pi.set_pull_up_down(GPIO, pigpio.PUD_UP)
     v = pi.read(GPIO)
-    print 'CH22 H1','BCM5','a_write',v
+    print 'CH11 C16','BCM23','a_write',v
     
 def a_write_lo_hi():
-    GPIO=5
+    GPIO=23
     pi.write(GPIO,0)
     v = pi.read(GPIO)
-    print 'CH22 H1','BCM5','a_write',v   	
+    print 'CH11 C16','BCM23','a_write',v   	
     pi.write(GPIO,1)
     v = pi.read(GPIO)
-    print 'CH22 H1','BCM5','a_write',v   	
+    print 'CH11 C16','BCM23','a_write',v   	
 
 
 def pullup_a_dstb():

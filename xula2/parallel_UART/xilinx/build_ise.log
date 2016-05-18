@@ -2,6 +2,12 @@ INFO:HDLCompiler:1845 - Analyzing Verilog file
    "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" into
    library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   missing.
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   missing.
 
 Started : "Synthesize - XST".
 Running xst...
@@ -19,41 +25,42 @@ Parsing module <xula2>.
 =========================================================================
 
 Elaborating module <xula2>.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 124: Result of 15-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 151: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 188: Result of 32-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 192: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 206: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 231: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 261: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 311: Result of 5-bit expression is truncated to fit in 4-bit target.
-"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 332. $display *** AssertionError ***
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 351: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 352: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 355: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 356: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 367: Assignment to uart_inst_fifo_tx_inst_fbus_count ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 371: Assignment to uart_inst_fifo_tx_inst_fbus_read_valid ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 392: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 398: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 452: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 453: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 456: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 457: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 468: Assignment to uart_inst_fifo_rx_inst_fbus_count ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 493: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 499: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 475: Assignment to uart_inst_fifo_rx_inst_fbus_full ignored, since the identifier is never used
-"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 586. $display *** AssertionError ***
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 538: Assignment to cmd_inst_mmc_inst_tocnt ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 651: Result of 9-bit expression is truncated to fit in 8-bit target.
-"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 662. $display *** AssertionError ***
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 713: Result of 9-bit expression is truncated to fit in 8-bit target.
-"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 738. $display *** AssertionError ***
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 594: Assignment to cmd_inst_bytemon ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 755: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 773: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 783: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 144: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 171: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 208: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 212: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 226: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 251: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 281: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 331: Result of 5-bit expression is truncated to fit in 4-bit target.
+"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 352. $display *** AssertionError ***
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 371: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 372: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 375: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 376: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 387: Assignment to uart_inst_fifo_tx_inst_fbus_count ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 391: Assignment to uart_inst_fifo_tx_inst_fbus_read_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 412: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 418: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 472: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 473: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 476: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 477: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 488: Assignment to uart_inst_fifo_rx_inst_fbus_count ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 513: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 519: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 495: Assignment to uart_inst_fifo_rx_inst_fbus_full ignored, since the identifier is never used
+"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 606. $display *** AssertionError ***
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 558: Assignment to cmd_inst_mmc_inst_tocnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 671: Result of 9-bit expression is truncated to fit in 8-bit target.
+"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 682. $display *** AssertionError ***
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 733: Result of 9-bit expression is truncated to fit in 8-bit target.
+"/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 758. $display *** AssertionError ***
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 614: Assignment to cmd_inst_bytemon ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 775: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 793: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 803: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" Line 821: Assignment to a_addr_reg ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -196,9 +203,9 @@ Synthesizing Unit <xula2>.
     Found 4-bit register for signal <uart_inst_rx_inst_mcnt>.
     Found 1-bit register for signal <uart_inst_rx_inst_rxinprog>.
     Found 1-bit register for signal <uart_inst_rx_inst_midbit>.
-    Found 32-bit register for signal <n0466[31:0]>.
+    Found 32-bit register for signal <n0487[31:0]>.
     Found 3-bit register for signal <uart_inst_synctx_inst_staps>.
-    Found 32-bit register for signal <n0465[31:0]>.
+    Found 32-bit register for signal <n0486[31:0]>.
     Found 8-bit register for signal <tone>.
     Found 8-bit register for signal <led>.
     Found 5-bit register for signal <reset_dly_cnt>.
@@ -242,34 +249,36 @@ Synthesizing Unit <xula2>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 14-bit adder for signal <tick_inst_mscnt[13]_GND_1_o_add_10_OUT> created at line 124.
-    Found 10-bit adder for signal <tick_inst_seccnt[9]_GND_1_o_add_17_OUT> created at line 151.
-    Found 11-bit adder for signal <uart_inst_baud_inst_cnt[10]_GND_1_o_add_29_OUT> created at line 192.
-    Found 4-bit adder for signal <uart_inst_baud_inst_cnt16[3]_GND_1_o_add_33_OUT> created at line 206.
-    Found 4-bit adder for signal <uart_inst_rx_inst_mcnt[3]_GND_1_o_add_40_OUT> created at line 231.
-    Found 4-bit adder for signal <uart_inst_rx_inst_bitcnt[3]_GND_1_o_add_50_OUT> created at line 261.
-    Found 4-bit adder for signal <uart_inst_tx_inst_bitcnt[3]_GND_1_o_add_73_OUT> created at line 311.
-    Found 2-bit adder for signal <uart_inst_fifo_tx_inst_addr[1]_GND_1_o_add_109_OUT> created at line 398.
-    Found 2-bit adder for signal <uart_inst_fifo_rx_inst_addr[1]_GND_1_o_add_142_OUT> created at line 499.
-    Found 8-bit adder for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[7]_GND_1_o_add_190_OUT> created at line 651.
-    Found 5-bit adder for signal <reset_dly_cnt[4]_GND_1_o_add_249_OUT> created at line 783.
-    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_29_OUT<10:0>> created at line 188.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_108_OUT<1:0>> created at line 392.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_141_OUT<1:0>> created at line 493.
-    Found 1-bit 8-to-1 multiplexer for signal <uart_inst_tx_inst_bitcnt[2]_uart_inst_tx_inst_txbyte[7]_Mux_74_o> created at line 312.
-    Found 8-bit 4-to-1 multiplexer for signal <uart_inst_tx_inst_fbustx_read_data> created at line 363.
-    Found 8-bit 4-to-1 multiplexer for signal <uart_inst_fbusrx_read_data> created at line 464.
-    Found 8-bit 12-to-1 multiplexer for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[3]_X_1_o_wide_mux_207_OUT> created at line 712.
-    Found 11-bit comparator lessequal for signal <n0026> created at line 187
-    Found 4-bit comparator lessequal for signal <n0060> created at line 260
-    Found 8-bit comparator lessequal for signal <n0197> created at line 650
-    Found 8-bit comparator greater for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[7]_GND_1_o_LessThan_207_o> created at line 709
-    Found 5-bit comparator greater for signal <reset_dly_cnt[4]_PWR_1_o_LessThan_249_o> created at line 782
-    Found 5-bit comparator greater for signal <n0419> created at line 784
-    Found 5-bit comparator lessequal for signal <n0422> created at line 787
+    Found 14-bit adder for signal <tick_inst_mscnt[13]_GND_1_o_add_12_OUT> created at line 144.
+    Found 10-bit adder for signal <tick_inst_seccnt[9]_GND_1_o_add_19_OUT> created at line 171.
+    Found 11-bit adder for signal <uart_inst_baud_inst_cnt[10]_GND_1_o_add_31_OUT> created at line 212.
+    Found 4-bit adder for signal <uart_inst_baud_inst_cnt16[3]_GND_1_o_add_35_OUT> created at line 226.
+    Found 4-bit adder for signal <uart_inst_rx_inst_mcnt[3]_GND_1_o_add_42_OUT> created at line 251.
+    Found 4-bit adder for signal <uart_inst_rx_inst_bitcnt[3]_GND_1_o_add_52_OUT> created at line 281.
+    Found 4-bit adder for signal <uart_inst_tx_inst_bitcnt[3]_GND_1_o_add_75_OUT> created at line 331.
+    Found 2-bit adder for signal <uart_inst_fifo_tx_inst_addr[1]_GND_1_o_add_111_OUT> created at line 418.
+    Found 2-bit adder for signal <uart_inst_fifo_rx_inst_addr[1]_GND_1_o_add_144_OUT> created at line 519.
+    Found 8-bit adder for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[7]_GND_1_o_add_192_OUT> created at line 671.
+    Found 5-bit adder for signal <reset_dly_cnt[4]_GND_1_o_add_251_OUT> created at line 803.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_31_OUT<10:0>> created at line 208.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_110_OUT<1:0>> created at line 412.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_143_OUT<1:0>> created at line 513.
+    Found 1-bit 8-to-1 multiplexer for signal <uart_inst_tx_inst_bitcnt[2]_uart_inst_tx_inst_txbyte[7]_Mux_76_o> created at line 332.
+    Found 8-bit 4-to-1 multiplexer for signal <uart_inst_tx_inst_fbustx_read_data> created at line 383.
+    Found 8-bit 4-to-1 multiplexer for signal <uart_inst_fbusrx_read_data> created at line 484.
+    Found 8-bit 12-to-1 multiplexer for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[3]_X_1_o_wide_mux_209_OUT> created at line 732.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit comparator lessequal for signal <n0027> created at line 207
+    Found 4-bit comparator lessequal for signal <n0061> created at line 280
+    Found 8-bit comparator lessequal for signal <n0198> created at line 670
+    Found 8-bit comparator greater for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[7]_GND_1_o_LessThan_209_o> created at line 729
+    Found 5-bit comparator greater for signal <reset_dly_cnt[4]_PWR_1_o_LessThan_251_o> created at line 802
+    Found 5-bit comparator greater for signal <n0420> created at line 804
+    Found 5-bit comparator lessequal for signal <n0423> created at line 807
     Summary:
 	inferred  11 Adder/Subtractor(s).
 	inferred 369 D-type flip-flop(s).
+	inferred   1 Latch(s).
 	inferred   7 Comparator(s).
 	inferred  70 Multiplexer(s).
 	inferred   3 Finite State Machine(s).
@@ -299,6 +308,8 @@ Macro Statistics
  4-bit register                                        : 4
  5-bit register                                        : 1
  8-bit register                                        : 8
+# Latches                                              : 1
+ 1-bit latch                                           : 1
 # Comparators                                          : 7
  11-bit comparator lessequal                           : 1
  4-bit comparator lessequal                            : 1
@@ -325,7 +336,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <tone_1> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_rpi2B_7> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tone_1> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tone_2> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tone_3> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tone_4> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
@@ -452,6 +464,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <to_rpi2B_7> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_1> on signal <uart_inst_rx_inst_state[1:2]> with gray encoding.
 -------------------
@@ -493,21 +506,20 @@ Optimizing FSM <FSM_0> on signal <cmd_inst_state[1:4]> with user encoding.
 
 Optimizing unit <xula2> ...
 WARNING:Xst:1710 - FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_4> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_5> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:XINFO:TclTasksC:1850 - process run : Synthesize - XST is done.
+st:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_5> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_6> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_7> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_inst_baud_inst_cnt_10> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 
-MappINFO:TclTasksC:1850 - process run : Synthesize - XST is done.
-ing all equations...
+Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block xula2, actual ratio is 8.
 FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_0 has been replicated 3 time(s)
 FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_1 has been replicated 3 time(s)
-FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_2 has been replicated 2 time(s)
-FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_3 has been replicated 2 time(s)
-FlipFlop cmd_inst_state_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop cmd_inst_state_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_2 has been replicated 1 time(s)
+FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_3 has been replicated 1 time(s)
+FlipFlop cmd_inst_state_FSM_FFd2 has been replicated 1 time(s)
 FlipFlop cmd_inst_state_FSM_FFd3 has been replicated 1 time(s)
 FlipFlop cmd_inst_state_FSM_FFd4 has been replicated 1 time(s)
 
@@ -522,8 +534,8 @@ Unit <xula2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 287
- Flip-Flops                                            : 287
+# Registers                                            : 283
+ Flip-Flops                                            : 283
 # Shift Registers                                      : 2
  3-bit shift register                                  : 2
 
@@ -549,7 +561,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 307   |
+clock                              | BUFGP                  | 303   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -560,14 +572,17 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.782ns (Maximum Frequency: 209.128MHz)
+   Minimum period: 5.190ns (Maximum Frequency: 192.678MHz)
    Minimum input arrival time before clock: 2.009ns
    Maximum output required time after clock: 4.118ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 5.961ns
 
 =========================================================================
 
 Process "Synthesize - XST" completed successfully
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   missing.
 INFO:TclTasksC:1850 - process run : Translate is done.
 
 Started : "Translate".
@@ -609,6 +624,9 @@ Writing NGDBUILD log file "xula2.bld"...
 NGDBUILD done.
 
 Process "Translate" completed successfully
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   missing.
 
 Started : "Map".
 Running map...
@@ -622,50 +640,50 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 5 secs 
-Total CPU  time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:211c5cc3) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:578e4bef) REAL time: 5 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:211c5cc3) REAL time: 5 secs 
+Phase 2.7  Design Feasibility Check (Checksum:578e4bef) REAL time: 5 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:211c5cc3) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:578e4bef) REAL time: 5 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:d38be3f6) REAL time: 8 secs 
+(Checksum:4ce26b7) REAL time: 8 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:d38be3f6) REAL time: 8 secs 
+Phase 5.36  Local Placement Optimization (Checksum:4ce26b7) REAL time: 8 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:d38be3f6) REAL time: 8 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:4ce26b7) REAL time: 8 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:d38be3f6) REAL time: 8 secs 
+Phase 7.3  Local Placement Optimization (Checksum:4ce26b7) REAL time: 8 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:d38be3f6) REAL time: 8 secs 
+Phase 8.5  Local Placement Optimization (Checksum:4ce26b7) REAL time: 8 secs 
 
 Phase 9.8  Global Placement
-.............................................................................
+..........................................................................
 ...................
-Phase 9.8  Global Placement (Checksum:6c4726bd) REAL time: 8 secs 
+Phase 9.8  Global Placement (Checksum:599b76c1) REAL time: 9 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:6c4726bd) REAL time: 8 secs 
+Phase 10.5  Local Placement Optimization (Checksum:599b76c1) REAL time: 9 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:c1718bb5) REAL time: 9 secs 
+Phase 11.18  Placement Optimization (Checksum:41196801) REAL time: 9 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:c1718bb5) REAL time: 9 secs 
+Phase 12.5  Local Placement Optimization (Checksum:41196801) REAL time: 9 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:bc1e917b) REAL time: 9 secs 
+Phase 13.34  Placement Validation (Checksum:382c4f6d) REAL time: 9 secs 
 
 Total REAL time to Placer completion: 9 secs 
 Total CPU  time to Placer completion: 9 secs 
@@ -676,16 +694,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                   289 out of  11,440    2%
-    Number used as Flip Flops:                 289
+  Number of Slice Registers:                   285 out of  11,440    2%
+    Number used as Flip Flops:                 285
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        301 out of   5,720    5%
-    Number used as logic:                      280 out of   5,720    4%
-      Number using O6 output only:             244
+  Number of Slice LUTs:                        293 out of   5,720    5%
+    Number used as logic:                      278 out of   5,720    4%
+      Number using O6 output only:             239
       Number using O5 output only:              13
-      Number using O5 and O6:                   23
+      Number using O5 and O6:                   26
       Number used as ROM:                        0
     Number used as Memory:                      10 out of   1,440    1%
       Number used as Dual Port RAM:              0
@@ -694,22 +712,22 @@ Slice Logic Utilization:
         Number using O6 output only:             2
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:     11
-      Number with same-slice register load:      7
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      1
       Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   111 out of   1,430    7%
+  Number of occupied Slices:                   113 out of   1,430    7%
   Number of MUXCYs used:                        40 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:          353
-    Number with an unused Flip Flop:            84 out of     353   23%
-    Number with an unused LUT:                  52 out ofINFO:TclTasksC:1850 - process run : Map is done.
-     353   14%
-    Number of fully used LUT-FF pairs:         217 out of     353   61%
+  Number of LUT Flip Flop pairs used:          359
+    Number with an unused Flip Flop:            87 out of     359   24%
+    Number with an unused LUT:                  66 out of     359INFO:TclTasksC:1850 - process run : Map is done.
+   18%
+    Number of fully used LUT-FF pairs:         206 out of     359   57%
     Number of unique control sets:              26
     Number of slice register sites lost
-      to control set restrictions:              61 out of  11,440    1%
+      to control set restrictions:              65 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -718,8 +736,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        11 out of     186    5%
-    Number of LOCed IOBs:                       11 out of      11  100%
+  Number of bonded IOBs:                        31 out of     186   16%
+    Number of LOCed IOBs:                       31 out of      31  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -746,7 +764,7 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.87
+Average Fanout of Non-Clock Nets:                4.76
 
 Peak Memory Usage:  672 MB
 Total REAL time to MAP completion:  10 secs 
@@ -778,16 +796,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-06-08".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   289 out of  11,440    2%
-    Number used as Flip Flops:                 289
+  Number of Slice Registers:                   285 out of  11,440    2%
+    Number used as Flip Flops:                 285
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        301 out of   5,720    5%
-    Number used as logic:                      280 out of   5,720    4%
-      Number using O6 output only:             244
+  Number of Slice LUTs:                        293 out of   5,720    5%
+    Number used as logic:                      278 out of   5,720    4%
+      Number using O6 output only:             239
       Number using O5 output only:              13
-      Number using O5 and O6:                   23
+      Number using O5 and O6:                   26
       Number used as ROM:                        0
     Number used as Memory:                      10 out of   1,440    1%
       Number used as Dual Port RAM:              0
@@ -796,18 +814,18 @@ Slice Logic Utilization:
         Number using O6 output only:             2
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:     11
-      Number with same-slice register load:      7
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      1
       Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   111 out of   1,430    7%
+  Number of occupied Slices:                   113 out of   1,430    7%
   Number of MUXCYs used:                        40 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:          353
-    Number with an unused Flip Flop:            84 out of     353   23%
-    Number with an unused LUT:                  52 out of     353   14%
-    Number of fully used LUT-FF pairs:         217 out of     353   61%
+  Number of LUT Flip Flop pairs used:          359
+    Number with an unused Flip Flop:            87 out of     359   24%
+    Number with an unused LUT:                  66 out of     359   18%
+    Number of fully used LUT-FF pairs:         206 out of     359   57%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -818,8 +836,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        11 out of     186    5%
-    Number of LOCed IOBs:                       11 out of      11  100%
+  Number of bonded IOBs:                        31 out of     186   16%
+    Number of LOCed IOBs:                       31 out of      31  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -853,16 +871,25 @@ Router effort level (-rl):    High
 Starting initial Timing Analysis.  REAL time: 4 secs 
 Finished initial Timing Analysis.  REAL time: 4 secs 
 
+WARNING:Par:288 - The signal a_write_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<4>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<5>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<6>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fr_rpi2B<7>_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 1884 unrouted;      REAL time: 4 secs 
+Phase  1  : 1889 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 1712 unrouted;      REAL time: 4 secs 
+Phase  2  : 1711 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 765 unrouted;      REAL time: 5 secs 
+Phase  3  : 778 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 765 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  4  : 778 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: xula2.ncd with current fully routed design.
 
@@ -896,7 +923,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         clock_BUFGP |  BUFGMUX_X2Y2| No   |   89 |  0.098     |  1.489      |
+|         clock_BUFGP |  BUFGMUX_X2Y2| No   |   91 |  0.103     |  1.494      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -915,9 +942,10 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
-----------------------------------------------------------------------------------------------------------
-  TS_clock = PERIOD TIMEGRP "clock" 83.3333 | SETUP       |    76.960ns|     6.373ns|       0|           0
-  333 ns HIGH 50%                           | HOLD        |     0.374ns|            |       0|           0
+----------INFO:TclTasksC:1850 - process run : Place & Route is done.
+------------------------------------------------------------------------------------------------
+  TS_clock = PERIOD TIMEGRP "clock" 83.3333 | SETUP       |    76.884ns|     6.449ns|       0|           0
+  333 ns HIGH 50%                           | HOLD        |     0.341ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -928,17 +956,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
+WARNING:Par:283 - There are 9 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
 Total REAL time to PAR completion: 7 secs 
 Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  623 MB
+Peak Memory Usage:  624 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 0
+Number of warning messages: 11
 Number of info messages: 0
 
 Writing design to file xula2.ncd
@@ -949,15 +979,14 @@ PAR done!
 
 Process "Place & Route" completed successfully
 
-StarINFO:TclTasksC:1850 - process run : Place & Route is done.
-ted : "Generate Post-Place & Route Static Timing".
+Started : "Generate Post-Place & Route Static Timing".
 Running trce...
 Command Line: trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml xula2.twx xula2.ncd -o xula2.twr xula2.pcf -ucf xula2.ucf
 Loading device for application Rf_Device from file '6slx9.nph' in environment
 /opt/Xilinx/14.6/ISE_DS/ISE/.
    "xula2" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
 
-Analysis completed Wed May 18 14:10:33 2016
+Analysis completed Wed May 18 15:21:01 2016
 --------------------------------------------------------------------------------
 
 Generating Report ...
