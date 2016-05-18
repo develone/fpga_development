@@ -1,17 +1,17 @@
 INFO:HDLCompiler:1845 - Analyzing Verilog file
-   "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" into library
+   "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" into library
    work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
 
 Started : "Synthesize - XST".
 Running xst...
-Command Line: xst -intstyle ise -ifn "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.xst" -ofn "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.syr"
+Command Line: xst -intstyle ise -ifn "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.xst" -ofn "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.syr"
 Reading design: xula2.prj
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" into library work
+Analyzing Verilog file "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" into library work
 Parsing module <xula2>.
 
 =========================================================================
@@ -19,48 +19,48 @@ Parsing module <xula2>.
 =========================================================================
 
 Elaborating module <xula2>.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 124: Result of 15-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 151: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 188: Result of 32-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 192: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 206: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 231: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 261: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 311: Result of 5-bit expression is truncated to fit in 4-bit target.
-"/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 332. $display *** AssertionError ***
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 351: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 352: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 355: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 356: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 367: Assignment to uart_inst_fifo_tx_inst_fbus_count ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 371: Assignment to uart_inst_fifo_tx_inst_fbus_read_valid ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 392: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 398: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 452: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 453: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 456: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 457: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 468: Assignment to uart_inst_fifo_rx_inst_fbus_count ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 493: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 499: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 475: Assignment to uart_inst_fifo_rx_inst_fbus_full ignored, since the identifier is never used
-"/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 586. $display *** AssertionError ***
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 538: Assignment to cmd_inst_mmc_inst_tocnt ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 651: Result of 9-bit expression is truncated to fit in 8-bit target.
-"/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 662. $display *** AssertionError ***
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 713: Result of 9-bit expression is truncated to fit in 8-bit target.
-"/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 738. $display *** AssertionError ***
-WARNING:HDLCompiler:1127 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 594: Assignment to cmd_inst_bytemon ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 755: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 773: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v" Line 783: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 124: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 151: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 188: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 192: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 206: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 231: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 261: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 311: Result of 5-bit expression is truncated to fit in 4-bit target.
+"/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 332. $display *** AssertionError ***
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 351: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 352: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 355: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 356: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 367: Assignment to uart_inst_fifo_tx_inst_fbus_count ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 371: Assignment to uart_inst_fifo_tx_inst_fbus_read_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 392: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 398: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 452: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 453: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 456: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 457: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 468: Assignment to uart_inst_fifo_rx_inst_fbus_count ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 493: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 499: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 475: Assignment to uart_inst_fifo_rx_inst_fbus_full ignored, since the identifier is never used
+"/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 586. $display *** AssertionError ***
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 538: Assignment to cmd_inst_mmc_inst_tocnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 651: Result of 9-bit expression is truncated to fit in 8-bit target.
+"/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 662. $display *** AssertionError ***
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 713: Result of 9-bit expression is truncated to fit in 8-bit target.
+"/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 738. $display *** AssertionError ***
+WARNING:HDLCompiler:1127 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 594: Assignment to cmd_inst_bytemon ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 755: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 773: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v" Line 783: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <xula2>.
-    Related source file is "/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.v".
+    Related source file is "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.v".
     Found 1-bit register for signal <uart_inst_baudce16>.
     Found 1-bit register for signal <uart_inst_baudce>.
     Found 1-bit register for signal <uart_inst_rx_inst_fbusrx_write>.
@@ -502,9 +502,9 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block xula2, actual ratio is 8.
 FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_0 has been replicated 3 time(s)
-FlipFlop XULAINFO:TclTasksC:1850 - process run : Synthesize - XST is done.
-2_CMD_INST_BEH_STATE_MACHINE.bytecnt_1 has been replicated 3 time(s)
-FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_2 has been replicated 2 time(s)
+FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_1 has been replicated 3 time(s)
+FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnINFO:TclTasksC:1850 - process run : Synthesize - XST is done.
+t_2 has been replicated 2 time(s)
 FlipFlop XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_3 has been replicated 2 time(s)
 FlipFlop cmd_inst_state_FSM_FFd1 has been replicated 1 time(s)
 FlipFlop cmd_inst_state_FSM_FFd2 has been replicated 2 time(s)
@@ -577,8 +577,8 @@ Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc xula2.ucf -p xc6
 Command Line: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -nt timestamp -uc xula2.ucf -p xc6slx9-ftg256-2 xula2.ngc xula2.ngd
 
-Reading NGO file
-"/home/vidal/wkg/jpeg-2000-test/xula2_fpga/UART/xilinx/xula2.ngc" ...
+Reading NGO file "/home/vidal/wkg/fpga_development/xula2/UART/xilinx/xula2.ngc"
+...
 Gathering constraint information from source properties...
 Done.
 
@@ -653,10 +653,10 @@ Phase 8.5  Local Placement Optimization (Checksum:d38be3f6) REAL time: 8 secs
 Phase 9.8  Global Placement
 .............................................................................
 ...................
-Phase 9.8  Global Placement (Checksum:6c4726bd) REAL time: 8 secs 
+Phase 9.8  Global Placement (Checksum:6c4726bd) REAL time: 9 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:6c4726bd) REAL time: 8 secs 
+Phase 10.5  Local Placement Optimization (Checksum:6c4726bd) REAL time: 9 secs 
 
 Phase 11.18  Placement Optimization
 Phase 11.18  Placement Optimization (Checksum:c1718bb5) REAL time: 9 secs 
@@ -866,18 +866,18 @@ Phase  4  : 765 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REA
 
 Updating file: xula2.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
 Total CPU time to Router completion: 6 secs 
 
 Partition Implementation Status
@@ -957,7 +957,7 @@ Loading device for application Rf_Device from file '6slx9.nph' in environment
 /opt/Xilinx/14.6/ISE_DS/ISE/.
    "xula2" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
 
-Analysis completed Sun May  8 16:24:57 2016
+Analysis completed Wed May 18 11:41:39 2016
 --------------------------------------------------------------------------------
 
 Generating Report ...
