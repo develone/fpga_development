@@ -1,0 +1,12 @@
+Both UART  and parallel are using:
+UART
+NET "bcm15_rxd" LOC = "B16" ;
+NET "bcm14_txd" LOC = "B15" ;
+
+parallel
+NET "a_wait" LOC = "B16" ; CH13 BCM 15 B16 --> CH9 BCM 25 F15 
+NET "a_dstb" LOC = "B15" ; CH14 BCM 14 B15 --> CH8 BCM 8  J14 
+
+step1 chg the pins a_wait & a_dstb to to unused GPIO.
+step2 modify a_wait.py for impacts of step 1.
+
