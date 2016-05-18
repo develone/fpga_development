@@ -114,29 +114,29 @@ def a_write_lo_hi():
 
 
 def pullup_a_dstb():
-    #CH14 a_dstb
-    GPIO=14
+    #CH8 a_dstb
+    GPIO=8
     pi.set_pull_up_down(GPIO, pigpio.PUD_UP)
     v = pi.read(GPIO)
-    print 'CH14 B15','BCM14','a_dstb',v
+    print 'CH8 J14','BCM8','a_dstb',v
 
 def a_dstb_lo():
-    GPIO=14
+    GPIO=8
     pi.write(GPIO,0)
     v = pi.read(GPIO)
-    print 'CH14 B15','BCM14','a_dstb',v   	
+    print 'CH8 J14','BCM8','a_dstb',v   	
 
 def a_dstb_lo_hi():
-    GPIO=14
+    GPIO=8
     pi.write(GPIO,0)
     v = pi.read(GPIO)
-    print 'CH14 B15','BCM14','a_dstb',v   	
+    print 'CH8 J14','BCM8','a_dstb',v   	
     pi.write(GPIO,1)
     v = pi.read(GPIO)
-    print 'CH14 B15','BCM14','a_dstb',v   	
+    print 'CH8 J14','BCM8','a_dstb',v   	
 
 def ck_a_wait():
-    GPIO=15
+    GPIO=25
     v = pi.read(GPIO)
     while(v == 1):
         v = pi.read(GPIO)
@@ -159,7 +159,7 @@ pullup_a_astb()
 pullup_a_dstb()
 pullup_a_write()
 to_rpi2B()
-GPIO=15 
+GPIO=25 
 v = pi.read(GPIO)
 print v
 for jj in range(128):
