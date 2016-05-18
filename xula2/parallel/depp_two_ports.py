@@ -11,8 +11,8 @@ from rhea.build.boards import get_board
 def build(args):
     '''
         3 GPIO for CTL OUTPUT 1 GPIO for CTL INPUT
-        CH14 B15 CH31 A2 CH22 H1 CH13 B16
-        BCM14    BCM2    BCM5    BCM15
+        CH8 J14 CH31 A2 CH22 H1 CH9 F15
+        BCM8    BCM2    BCM5    BCM25
 	GPIO FOR XULA2-LX9
 
 	8 GPIO FOR OUTPUT  
