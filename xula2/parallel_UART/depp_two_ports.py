@@ -53,7 +53,7 @@ def cliparse():
     args = parser.parse_args()
     return args
 def para_rpi2B( clock,fr_rpi2B,a_dstb,a_astb,a_write,a_wait,to_rpi2B):
-    reset    = ResetSignal( 0, active=1, async=True )
+    reset    = ResetSignal( 0, active=0, async=True )
     a_addr_reg = Signal(intbv(0)[8:])
     a_data_reg = Signal(intbv(0)[8:])
      
@@ -70,11 +70,11 @@ def para_rpi2B( clock,fr_rpi2B,a_dstb,a_astb,a_write,a_wait,to_rpi2B):
         if (reset_dly_cnt < 10):
             reset_dly_cnt.next = reset_dly_cnt + 1
             if (reset_dly_cnt <= 4):
-                reset.next = 0
-            if (reset_dly_cnt >= 5):
                 reset.next = 1
+            if (reset_dly_cnt >= 5):
+                reset.next = 0
         else:
-            reset.next = 0
+            reset.next = 1
  
     
 
@@ -89,7 +89,7 @@ def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_data_reg,fr_rpi2B,to_rp
     a_dstb_sr = Signal(intbv(0)[3:])
     @always_comb
     def rtl1():
-        a_wait.next = not a_astb or not a_dstb
+        a_wait.next = (not a_astb) or (not a_dstb)
 
     @always(clock.posedge)
     def rtl2():
@@ -106,7 +106,7 @@ def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_data_reg,fr_rpi2B,to_rp
         if (~a_write and a_dstb_sr == 4):
             a_data_reg.next = fr_rpi2B
      
-    @always_comb
+    @always(clock.posedge)
     def rtl5():
 	if(a_write == 1):
             to_rpi2B.next = a_data_reg

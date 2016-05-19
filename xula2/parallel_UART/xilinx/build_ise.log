@@ -2,12 +2,6 @@ INFO:HDLCompiler:1845 - Analyzing Verilog file
    "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" into
    library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
 
 Started : "Synthesize - XST".
 Running xst...
@@ -577,9 +571,6 @@ Speed Grade: -2
 =========================================================================
 
 Process "Synthesize - XST" completed successfully
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
 INFO:TclTasksC:1850 - process run : Translate is done.
 
 Started : "Translate".
@@ -621,9 +612,6 @@ Writing NGDBUILD log file "xula2.bld"...
 NGDBUILD done.
 
 Process "Translate" completed successfully
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
 
 Started : "Map".
 Running map...
@@ -763,7 +751,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.65
 
-Peak Memory Usage:  673 MB
+Peak Memory Usage:  672 MB
 Total REAL time to MAP completion:  10 secs 
 Total CPU time to MAP completion:   10 secs 
 
@@ -771,9 +759,6 @@ Mapping completed.
 See MAP report file "xula2_map.mrp" for details.
 
 Process "Map" completed successfully
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
 
 Started : "Place & Route".
 Running par...
@@ -856,10 +841,7 @@ Specific Feature Utilization:
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         0 out of       4    0%
   Number of DSP48A1s:                            0 out of      16    0%
-  Number of ICAPs:                               0 out of  WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
-     1    0%
+  Number of ICAPs:                               0 out of       1    0%
   Number of MCBs:                                0 out of       2    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
   Number of PLL_ADVs:                            0 out of       2    0%
@@ -967,18 +949,18 @@ Writing design to file xula2.ncd
 
 
 PAR done!
-INFO:TclTasksC:1850 - process run : Place & Route is done.
 
 Process "Place & Route" completed successfully
 
-Started : "Generate Post-Place & Route Static Timing".
+StarINFO:TclTasksC:1850 - process run : Place & Route is done.
+ted : "Generate Post-Place & Route Static Timing".
 Running trce...
 Command Line: trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml xula2.twx xula2.ncd -o xula2.twr xula2.pcf -ucf xula2.ucf
 Loading device for application Rf_Device from file '6slx9.nph' in environment
 /opt/Xilinx/14.6/ISE_DS/ISE/.
    "xula2" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
 
-Analysis completed Thu May 19 13:47:17 2016
+Analysis completed Thu May 19 16:51:42 2016
 --------------------------------------------------------------------------------
 
 Generating Report ...
@@ -987,9 +969,6 @@ Number of warnings: 0
 Total time: 3 secs 
 
 Process "Generate Post-Place & Route Static Timing" completed successfully
-WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
-   missing.
 INFO:TclTasksC:1850 - process run : Generate Programming File is done.
 
 Started : "Generate Programming File".
