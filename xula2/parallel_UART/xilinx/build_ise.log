@@ -2,6 +2,12 @@ INFO:HDLCompiler:1845 - Analyzing Verilog file
    "/home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.v" into
    library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
+   missing.
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
+   missing.
 
 Started : "Synthesize - XST".
 Running xst...
@@ -197,15 +203,16 @@ Synthesizing Unit <xula2>.
     Found 4-bit register for signal <uart_inst_rx_inst_mcnt>.
     Found 1-bit register for signal <uart_inst_rx_inst_rxinprog>.
     Found 1-bit register for signal <uart_inst_rx_inst_midbit>.
-    Found 32-bit register for signal <n0487[31:0]>.
+    Found 32-bit register for signal <n0482[31:0]>.
     Found 3-bit register for signal <uart_inst_synctx_inst_staps>.
-    Found 32-bit register for signal <n0486[31:0]>.
+    Found 32-bit register for signal <n0481[31:0]>.
     Found 8-bit register for signal <tone>.
     Found 8-bit register for signal <led>.
     Found 5-bit register for signal <reset_dly_cnt>.
     Found 1-bit register for signal <reset>.
     Found 3-bit register for signal <a_dstb_sr>.
     Found 8-bit register for signal <a_data_reg>.
+    Found 8-bit register for signal <to_rpi2B>.
     Found finite state machine <FSM_0> for signal <cmd_inst_state>.
     -----------------------------------------------------------------------
     | States             | 11                                             |
@@ -263,14 +270,6 @@ Synthesizing Unit <xula2>.
     Found 8-bit 4-to-1 multiplexer for signal <uart_inst_tx_inst_fbustx_read_data> created at line 381.
     Found 8-bit 4-to-1 multiplexer for signal <uart_inst_fbusrx_read_data> created at line 482.
     Found 8-bit 12-to-1 multiplexer for signal <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt[3]_X_1_o_wide_mux_207_OUT> created at line 730.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 11-bit comparator lessequal for signal <n0026> created at line 205
     Found 4-bit comparator lessequal for signal <n0060> created at line 278
     Found 8-bit comparator lessequal for signal <n0197> created at line 668
@@ -280,8 +279,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <to_rpi2B<0>>. Latches may be gen
     Found 5-bit comparator lessequal for signal <n0422> created at line 805
     Summary:
 	inferred  11 Adder/Subtractor(s).
-	inferred 380 D-type flip-flop(s).
-	inferred   8 Latch(s).
+	inferred 388 D-type flip-flop(s).
 	inferred   7 Comparator(s).
 	inferred  70 Multiplexer(s).
 	inferred   3 Finite State Machine(s).
@@ -299,7 +297,7 @@ Macro Statistics
  4-bit adder                                           : 4
  5-bit adder                                           : 1
  8-bit adder                                           : 1
-# Registers                                            : 141
+# Registers                                            : 142
  1-bit register                                        : 115
  10-bit register                                       : 1
  11-bit register                                       : 1
@@ -310,9 +308,7 @@ Macro Statistics
  32-bit register                                       : 3
  4-bit register                                        : 4
  5-bit register                                        : 1
- 8-bit register                                        : 9
-# Latches                                              : 8
- 1-bit latch                                           : 8
+ 8-bit register                                        : 10
 # Comparators                                          : 7
  11-bit comparator lessequal                           : 1
  4-bit comparator lessequal                            : 1
@@ -378,8 +374,8 @@ The following registers are absorbed into counter <tick_inst_mscnt>: 1 register 
 The following registers are absorbed into counter <tick_inst_seccnt>: 1 register on signal <tick_inst_seccnt>.
 The following registers are absorbed into counter <uart_inst_baud_inst_cnt16>: 1 register on signal <uart_inst_baud_inst_cnt16>.
 The following registers are absorbed into counter <uart_inst_fifo_tx_inst_addr>: 1 register on signal <uart_inst_fifo_tx_inst_addr>.
-The following registers are absorbed into counter <reset_dly_cnt>: 1 register on signal <reset_dly_cnt>.
 The following registers are absorbed into counter <uart_inst_fifo_rx_inst_addr>: 1 register on signal <uart_inst_fifo_rx_inst_addr>.
+The following registers are absorbed into counter <reset_dly_cnt>: 1 register on signal <reset_dly_cnt>.
 The following registers are absorbed into counter <uart_inst_rx_inst_mcnt>: 1 register on signal <uart_inst_rx_inst_mcnt>.
 Unit <xula2> synthesized (advanced).
 
@@ -441,8 +437,8 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Accumulators                                         : 1
  11-bit updown accumulator                             : 1
-# Registers                                            : 233
- Flip-Flops                                            : 233
+# Registers                                            : 241
+ Flip-Flops                                            : 241
 # Shift Registers                                      : 16
  4-bit dynamic shift register                          : 16
 # Comparators                                          : 7
@@ -509,7 +505,8 @@ Optimizing unit <xula2> ...
 WARNING:Xst:1710 - FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_4> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_5> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_6> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_7> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XULA2_CMD_INST_BEH_STATE_MACHINE.bytecnt_7> (without init value) has aINFO:TclTasksC:1850 - process run : Synthesize - XST is done.
+ constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_inst_baud_inst_cnt_10> (without init value) has a constant value of 0 in block <xula2>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
@@ -534,8 +531,8 @@ Unit <xula2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 294
- Flip-Flops                                            : 294
+# Registers                                            : 302
+ Flip-Flops                                            : 302
 # Shift Registers                                      : 2
  3-bit shift register                                  : 2
 
@@ -554,16 +551,14 @@ Partition Implementation Status
 
 =========================================================================
 *                            Design Summary                             *
-================================================================INFO:TclTasksC:1850 - process run : Synthesize - XST is done.
-=========
+=========================================================================
 
 Clock Information:
 ------------------
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 314   |
-a_write                            | IBUF+BUFG              | 8     |
+clock                              | BUFGP                  | 322   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -575,13 +570,16 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 5.190ns (Maximum Frequency: 192.678MHz)
-   Minimum input arrival time before clock: 3.785ns
-   Maximum output required time after clock: 4.174ns
+   Minimum input arrival time before clock: 4.079ns
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: 5.961ns
 
 =========================================================================
 
 Process "Synthesize - XST" completed successfully
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
+   missing.
 INFO:TclTasksC:1850 - process run : Translate is done.
 
 Started : "Translate".
@@ -615,7 +613,7 @@ NGDBUILD Design Results Summary:
   Number of warnings:   0
 
 Writing NGD file "xula2.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
+Total REAL time to NGDBUILD completion:  4 sec
 Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "xula2.bld"...
@@ -623,7 +621,9 @@ Writing NGDBUILD log file "xula2.bld"...
 NGDBUILD done.
 
 Process "Translate" completed successfully
-INFO:TclTasksC:1850 - process run : Map is done.
+WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
+   missing.
 
 Started : "Map".
 Running map...
@@ -640,59 +640,360 @@ Total REAL time at the beginning of Placer: 5 secs
 Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:5ce5d9a8) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:578e96aa) REAL time: 5 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:5ce5d9a8) REAL time: 5 secs 
+Phase 2.7  Design Feasibility Check (Checksum:578e96aa) REAL time: 5 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:5ce5d9a8) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:578e96aa) REAL time: 5 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
-........
-ERROR:Place:1108 - A clock IOB / BUFGMUX clock component pair have been found
-   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
-   IOB component <a_write> is placed at site <C16>. The corresponding BUFG
-   component <a_write_IBUF_BUFG> is placed at site <BUFGMUX_X2Y3>. There is only
-   a select set of IOBs that can use the fast path to the Clocker buffer, and
-   they are not being used. You may want to analyze why this problem exists and
-   correct it. If this sub optimal condition is acceptable for this design, you
-   may use the CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this
-   message to a WARNING and allow your design to continue. However, the use of
-   this override is highly discouraged as it may lead to very poor timing
-   results. It is recommended that this error condition be corrected in the
-   design. A list of all the COMP.PINs used in this clock placement rule is
-   listed below. These examples can be used directly in the .ucf file to
-   override this clock rule.
-   < NET "a_write" CLOCK_DEDICATED_ROUTE = FALSE; >
-
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:5507e0f7) REAL time: 8 secs 
+(Checksum:4ce7172) REAL time: 8 secs 
 
-Total REAL time to Placer completion: 8 secs 
-Total CPU  time to Placer completion: 8 secs 
-ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:4ce7172) REAL time: 8 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:4ce7172) REAL time: 8 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:4ce7172) REAL time: 8 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:4ce7172) REAL time: 8 secs 
+
+Phase 9.8  Global Placement
+..............................................................................
+...........................................................
+Phase 9.8  Global Placement (Checksum:98002da0) REAL time: 9 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:98002da0) REAL time: 9 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:c5f8aa68) REAL time: 9 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:c5f8aa68) REAL time: 9 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:be252d03) REAL time: 9 secs 
+
+Total REAL time to Placer completion: 9 secs 
+Total CPU  time to Placer completion: 9 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                   304 out of  11,440    2%
+    Number used as Flip Flops:                 304
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        293 out of   5,720    5%
+    Number used as logic:                      279 out of   5,720    4%
+      Number using O6 output only:             240
+      Number using O5 output only:              13
+      Number using O5 and O6:                   26
+      Number used as ROM:                        0
+    Number used as Memory:                      10 out of   1,440    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            10
+        Number using O6 output only:             2
+        Number using O5 output only:             0
+        Number using O5 and O6:                  8
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   121 out of   1,430    8%
+  Number of MUXCYs used:                        40 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          376
+    Number with an unused Flip Flop:            84 out of     376   22%
+    Number with an unINFO:TclTasksC:1850 - process run : Map is done.
+used LUT:                  83 out of     376   22%
+    Number of fully used LUT-FF pairs:         209 out of     376   55%
+    Number of unique control sets:              28
+    Number of slice register sites lost
+      to control set restrictions:              62 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        31 out of     186   16%
+    Number of LOCed IOBs:                       31 out of      31  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.65
+
+Peak Memory Usage:  673 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   10 secs 
 
 Mapping completed.
 See MAP report file "xula2_map.mrp" for details.
-Problem encountered during the packing phase.
 
-Design Summary
---------------
-Number of errors   :   2
-Number of warnings :   0
-
-Process "Map" failed
+Process "Map" completed successfully
 WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
    missing.
-INFO:ProjectMgmt - The selected process was not run because a prior process
-   failed.
+
+Started : "Place & Route".
+Running par...
+Command Line: par -w -intstyle ise -ol high -mt off xula2_map.ncd xula2.ncd xula2.pcf
+
+
+
+Constraints file: xula2.pcf.
+Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.6/ISE_DS/ISE/.
+   "xula2" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-06-08".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   304 out of  11,440    2%
+    Number used as Flip Flops:                 304
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        293 out of   5,720    5%
+    Number used as logic:                      279 out of   5,720    4%
+      Number using O6 output only:             240
+      Number using O5 output only:              13
+      Number using O5 and O6:                   26
+      Number used as ROM:                        0
+    Number used as Memory:                      10 out of   1,440    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            10
+        Number using O6 output only:             2
+        Number using O5 output only:             0
+        Number using O5 and O6:                  8
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   121 out of   1,430    8%
+  Number of MUXCYs used:                        40 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          376
+    Number with an unused Flip Flop:            84 out of     376   22%
+    Number with an unused LUT:                  83 out of     376   22%
+    Number of fully used LUT-FF pairs:         209 out of     376   55%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  11,440    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        31 out of     186   16%
+    Number of LOCed IOBs:                       31 out of      31  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of  WARNING:ProjectMgmt - File
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
+   missing.
+     1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+Starting Router
+
+
+Phase  1  : 1918 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 1740 unrouted;      REAL time: 4 secs 
+
+Phase  3  : 753 unrouted;      REAL time: 5 secs 
+
+Phase  4  : 753 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Updating file: xula2.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 6 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         clock_BUFGP |  BUFGMUX_X2Y2| No   |   95 |  0.076     |  1.467      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clock = PERIOD TIMEGRP "clock" 83.3333 | SETUP       |    76.788ns|     6.545ns|       0|           0
+  333 ns HIGH 50%                           | HOLD        |     0.344ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
+
+Peak Memory Usage:  624 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file xula2.ncd
+
+
+
+PAR done!
 INFO:TclTasksC:1850 - process run : Place & Route is done.
+
+Process "Place & Route" completed successfully
+
+Started : "Generate Post-Place & Route Static Timing".
+Running trce...
+Command Line: trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml xula2.twx xula2.ncd -o xula2.twr xula2.pcf -ucf xula2.ucf
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+/opt/Xilinx/14.6/ISE_DS/ISE/.
+   "xula2" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
+
+Analysis completed Thu May 19 13:47:17 2016
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Total time: 3 secs 
+
+Process "Generate Post-Place & Route Static Timing" completed successfully
 WARNING:ProjectMgmt - File
-   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2_map.ncd is
+   /home/vidal/wkg/fpga_development/xula2/parallel_UART/xilinx/xula2.bit is
    missing.
-INFO:ProjectMgmt - The selected process was not run because a prior process
-   failed.
 INFO:TclTasksC:1850 - process run : Generate Programming File is done.
+
+Started : "Generate Programming File".
+Running bitgen...
+Command Line: bitgen -intstyle ise -f xula2.ut xula2.ncd
+
+Process "Generate Programming File" completed successfully

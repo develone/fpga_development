@@ -106,7 +106,7 @@ def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_data_reg,fr_rpi2B,to_rp
         if (~a_write and a_dstb_sr == 4):
             a_data_reg.next = fr_rpi2B
      
-    @always_comb
+    @always(clock.posedge)
     def rtl5():
 	if(a_write == 1):
             to_rpi2B.next = a_data_reg

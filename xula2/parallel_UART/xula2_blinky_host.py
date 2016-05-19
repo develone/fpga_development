@@ -104,7 +104,7 @@ def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd,a_dstb,a_astb,a_write,a_w
         if (~a_write and a_dstb_sr == 4):
             a_data_reg.next = fr_rpi2B
      
-    @always_comb
+    @always(clock.posedge)
     def rtl5():
 	if(a_write == 1):
             to_rpi2B.next = a_data_reg                                
