@@ -19,6 +19,7 @@ NET "fr_rpi2B<7>" LOC = "J16" ;
 NET "a_dstb" LOC = "J14" ;
 NET "a_astb" LOC = "A2" ;
 NET "a_write" LOC = "C16" ;
+NET "a_write" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "a_wait" LOC = "F15" ;
 #
 NET "clock" TNM_NET = "clock"; 

@@ -87,7 +87,7 @@ def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd,a_dstb,a_astb,a_write,a_w
 
     @always_comb
     def rtl1():
-        a_wait.next = (not a_astb) or (not a_dstb)
+        a_wait.next = (~ a_astb) | (~ a_dstb)
 
     @always(clock.posedge)
     def rtl2():

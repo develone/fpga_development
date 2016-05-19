@@ -89,7 +89,7 @@ def depp(clock,a_dstb,a_astb,a_write,a_wait,a_addr_reg,a_data_reg,fr_rpi2B,to_rp
     a_dstb_sr = Signal(intbv(0)[3:])
     @always_comb
     def rtl1():
-        a_wait.next = not a_astb or not a_dstb
+        a_wait.next = ~ a_astb | ~ a_dstb
 
     @always(clock.posedge)
     def rtl2():

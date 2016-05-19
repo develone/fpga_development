@@ -1,6 +1,7 @@
 #
 NET "a_dstb" LOC = "J14" ;
 NET "a_write" LOC = "C16" ;
+NET "a_write" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "to_rpi2B<0>" LOC = "H2" ;
 NET "to_rpi2B<1>" LOC = "F2" ;
 NET "to_rpi2B<2>" LOC = "E2" ;
