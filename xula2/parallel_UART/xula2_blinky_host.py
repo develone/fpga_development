@@ -90,6 +90,11 @@ def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd,a_dstb,a_astb,a_write,a_w
         a_wait.next = (not a_astb) or (not a_dstb)
 
     @always(clock.posedge)
+    def rtl2():
+        a_astb_sr.next = concat(a_astb_sr[2:0], a_astb)
+        a_dstb_sr.next = concat(a_dstb_sr[2:0], a_dstb)
+
+    @always(clock.posedge)
     def rtl3():
         if (~a_write and a_astb_sr == 4):
             a_addr_reg.next = fr_rpi2B
@@ -104,7 +109,7 @@ def xula2_blinky_host(clock, led, bcm14_txd, bcm15_rxd,a_dstb,a_astb,a_write,a_w
 	if(a_write == 1):
             to_rpi2B.next = a_data_reg                                
     return (tick_inst, uart_inst, cmd_inst,
-            beh_led_control, beh_led_read, beh_assign, reset_tst,rtl1,rtl3,rtl4,rtl5)
+            beh_led_control, beh_led_read, beh_assign, reset_tst,rtl1,rtl2,rtl3,rtl4,rtl5)
 
 
 def build(args):
