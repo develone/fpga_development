@@ -153,15 +153,18 @@ print 'xstest -u 0 -b xula2-lx9'
 print 'reload the program'
 print 'xsload --usb 0 --fpga xula2_wait.bit'
 
-ck_a_wait()
-print 'testing making a_wait go hi' 
+#ck_a_wait()
+#print 'testing making a_wait go hi' 
+GPIO=25 
+v = pi.read(GPIO)
+print 'a_wait', v
 pullup_a_astb()
 pullup_a_dstb()
 pullup_a_write()
 to_rpi2B()
 GPIO=25 
 v = pi.read(GPIO)
-print v
+print 'a_wait', v
 for jj in range(128):
     print 'fr_rpi2B',jj
     fr_rpi2B(jj)
